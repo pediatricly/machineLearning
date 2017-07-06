@@ -1,0 +1,30 @@
+<2017-01-24 Tue>
+* Review - General Machine Learning + Linear Regression
+** Every machine learning setup needs:
+*** Target function, ie f(x) -> y. The real world function that generates y
+    from x
+*** Unknown distribution of x. Real world x features are drawn from some
+    distribution.
+**** Those 2 combined are the training set! Ie set of (y, X0, x1...)
+*** An error measure, ie the cost function
+
+*** Hypothessis set - the set of functional forms your model will consider.
+    E.g., is it just linear regression or are polynomials ok.
+    Learning algorithm that puts it all together. E.g., stochastic gradient
+       descent (which, recall, traces the gradient of the COST function). For
+       regular linear regression, OLS is BLUE -> it's a closed, analytic
+       solution. But for more complex hypothesis sets, you're pretty much
+       always using an interative approach.
+
+     Then, all those things together yield the found hypothesis, i.e, the
+       preidcted model, which apparently is represented g(x)
+ 
+* Logistic Regression
+  Fortunately I just did this in Andrew Ng's class!
+  Hypothesis:
+  f(x) = p(y=1 | x) where y is member of [0,1]
+  Because the linear function fits this very poorly (Ng gives great
+  examples), we use the logistic function to fit the prediction data:
+  h(s) = e^s / (1 + e^s)
+  h(w.x) = 1 / (1 + e^-wx)
+
